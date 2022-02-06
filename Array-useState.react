@@ -1,0 +1,36 @@
+import React, {useState } from "react";
+import propType from "prop-types"
+
+//This function contact with Arr
+// function initArray() {
+//     let arr = [];
+//     for (let i=0; i<1000; 1++) {
+//         arr.push(i)
+//     }
+//     return arr;
+// }
+
+export default function App() {
+    // const [count, setCount] = useStage(initArray());
+    //This  function  contact function
+    //const  [arr, setArr] = useState(initArray());
+    const [] = useState(()=> {
+        let arr = [];
+    for (let i=0; i<1000; 1++) {
+        arr.push(i)
+    }
+    return arr;
+    })
+
+    // // // function updateCount() {
+    //     setCount()
+    //     // setCount((prevCount) =>prevCount +1)
+    // }
+    return (
+        <>
+            {/* <p onClick={updateCount}>{count}</p> */}
+            <p onClick={() =>setArr([...arr, 1])}>{arr.length}</p>
+        </>
+    )
+}
+export default App;
