@@ -1,0 +1,33 @@
+import React, { Component, useState } from "react";
+import propType from "prop-types"
+
+
+export default function App(    ) {
+    const [number, setnumber] = useState(0)
+    const [dark, setdark] = useState(false)
+    const doublenumber = useMemo ( () => {
+        return
+        slowFunction(number) },[nummber] );
+
+    const themsStyle = useMomo (()=>  {
+        return
+        backgroundColor:dark ? 'black': 'white',
+        color : dark ? 'white': 'black'
+    }, [dark])
+    
+    return (
+        <>
+            <input type ="number" value ={number} onChange={e=> setNumber(parseInt(e.target.value))}/>
+            <button onClick={()=> setDark(prevDark => !prevDark)}>Change Them</button>
+            <div style={themStyles}>{doublenumber}</div>
+        </>
+    )
+     function slowFunction (num) {
+         for(let i = 0; i <=1000 ; i ++ ) {
+            num+2;
+         }
+     }
+
+}
+
+export default App;
